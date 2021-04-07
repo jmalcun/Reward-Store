@@ -13,13 +13,18 @@ export const Navbar = () => {
             }, 500);
         }else setOpenMenu(!openMenu)
         setState(!state)
-        
+    }
+
+    const classNameSelect = () => {
+        if(openMenu){
+            return "btn-menu background-15dbff"
+        }else return "btn-menu background-15dbff animation1"
     }
 
     return (
         <div className="data-user">
             <div className="logo-box">
-                <button className={(openMenu)  ?"btn-menu background-15dbff" :"btn-menu background-15dbff animation1"} onClick={handleClick}>Menu <i className="fas fa-angle-double-right margin-left-5"></i></button>
+                <button className={classNameSelect()} onClick={handleClick}>Menu <i className="fas fa-angle-double-right margin-left-5"></i></button>
             {
                 (openMenu)
                     &&<MenuItems state={state} />
