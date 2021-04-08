@@ -21,6 +21,13 @@ body{
     color: #15dbff;
 }
 
+.color-darkgrey{
+    color: #6e6b6b;
+}
+
+.color-disabled{
+    color: rgba(211, 211, 211, 0.822);
+}
 
 .background-15dbff{
     background-color: #15dbff;
@@ -332,16 +339,19 @@ body{
     outline: none;
 }
 
-.page-control-buttons img:first-child{
+.page-control-buttons i:first-child{
     margin-right: 15px;
 }
 
-.page-control-buttons img{
-    cursor: pointer;
+.page-control-buttons i{
+    
+    font-size: 40px;
 }
 
 
 .page-control-buttons button{
     border: none;
     background-color: transparent;
+    outline: none;
+    cursor: pointer;
 }
