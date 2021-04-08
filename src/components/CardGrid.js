@@ -1,30 +1,25 @@
-import React, { useEffect, useState } from 'react'
-import { getProductsOrUser } from '../helpers/getProducts-user'
+import React from 'react'
+import spiner from '../assets/icons/loading.svg'
 import { CardProduct } from './CardProduct'
 import { PageControl } from './PageControl'
 
-export const CardGrid = () => {
+export const CardGrid = ({currentList, loading, currentPage, nextPage, previousPage}) => {
 
-    const [productos, setProductos] = useState([])
-
-    useEffect(() => {
-        getProductsOrUser("products")
-            .then( p => setProductos(p))
-    }, [])
     
-
+    
     return (
         <>
         <div className="card-grid">
             {
-                (productos.length !== 0)
-                    &&productos.map( p => (
+                (currentList.length !== 0 && !loading)
+                    ?currentList.map( p => (
                         <CardProduct key={p._id} {...p} />
-                ))
+                    ))
+                    :<img className="loading" src={spiner} />
             }
             
         </div>
-        <PageControl />
+        <PageControl currentPage={currentPage} loading={loading} nextPage={nextPage} previousPage={previousPage}/>
         </>
 
         

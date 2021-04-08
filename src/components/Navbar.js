@@ -17,14 +17,20 @@ export const Navbar = () => {
 
     const classNameSelect = () => {
         if(openMenu){
-            return "btn-menu background-15dbff"
-        }else return "btn-menu background-15dbff animation1"
+            return {
+               i: "fas fa-angle-double-right margin-left-5",
+               button:"btn-menu background-15dbff"
+            }
+        }else return{
+            i:"fas fa-angle-double-right margin-left-5 animation1 ",
+            button:"btn-menu animation2"
+        } 
     }
-
+    
     return (
         <div className="data-user">
             <div className="logo-box">
-                <button className={classNameSelect()} onClick={handleClick}>Menu <i className="fas fa-angle-double-right margin-left-5"></i></button>
+                <button className={classNameSelect().button} onClick={handleClick}>Menu <i className={classNameSelect().i}></i></button>
             {
                 (openMenu)
                     &&<MenuItems state={state} />

@@ -17,6 +17,11 @@ body{
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+.color-15dbff{
+    color: #15dbff;
+}
+
+
 .background-15dbff{
     background-color: #15dbff;
 }
@@ -36,30 +41,64 @@ body{
 .animation1{
     animation: moveRigth 1.5s infinite linear;
 }
+@keyframes moveRigth{
+    from{
+        transform: translateX(0);
+        box-shadow: 0px 0px 0px 0px transparent;
+        background-color: transparent;
+    }
+    to{
+        transform: translateX(5px);
+        box-shadow: -7px 0px 0px 0px transparent;
+        background-color: transparent;
+        
+    }
+}
+
+.animation2{
+    animation: colors 2s infinite ease;
+}
+
+@keyframes colors{
+    0%{
+        background-color: #15dbff;
+    }
+    50%{
+        background-color: #5c2da0;
+    }
+    100%{
+        background-color: #f1d87d;
+    }
+}
 
 .margin-left-5{
     margin-left: 5px;
 }
 
-@keyframes moveRigth{
+.display-none{
+    display: none;
+}
+
+.loading{
+    width: 5%;
+    height: 5%;
+    animation: girar 2s infinite linear;
+}
+
+@keyframes girar{
     from{
-        transform: translateX(0);
-        box-shadow: 0px 0px 0px 0px lightgray;
-        background-color: #15dbff;
+        transform: rotateZ(0deg);
     }
     to{
-        transform: translateX(5px);
-        box-shadow: -7px 0px 0px 0px lightgray;
-        background-color: #15dcff2a;
-        
+        transform: rotateZ(360deg);
     }
 }
 
 .btn{
     width: 160px;
-    height: 45px;
+    height: 40px;
     border-radius: 20.5px;
-    background-color: #EDEDED;
+    background-color: #d8d7d7;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,7 +233,7 @@ body{
 
 .number-pagination p{
     font-weight: 600;
-    font-size: 24px;
+    font-size: 21px;
 }
 
 .filters{
@@ -288,6 +327,21 @@ body{
     margin-bottom: 25px;
 }
 
+.page-control-buttons{
+    display: flex;
+    outline: none;
+}
+
 .page-control-buttons img:first-child{
     margin-right: 15px;
+}
+
+.page-control-buttons img{
+    cursor: pointer;
+}
+
+
+.page-control-buttons button{
+    border: none;
+    background-color: transparent;
 }
