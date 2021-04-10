@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { FilterPriceHighest, FilterPriceLower } from "../helpers/FilterPrice";
 import { getProductsOrUser } from "../helpers/getProducts-user";
 
 
@@ -8,6 +9,7 @@ export const usePagination = () => {
     const [currentPage, setCurrentPage] = useState(1)
     const [postPerPage, setPostPerPage] = useState(16)
     const [loading, setLoding] = useState(false)
+    
 
     useEffect(() => {
         getProductsOrUser("products")
@@ -18,6 +20,22 @@ export const usePagination = () => {
     const indexOfLast = currentPage * postPerPage;
     const indexOfFirst = indexOfLast - postPerPage;
     const currentList = list.slice(indexOfFirst, indexOfLast);
+    
+    const filterPriceLowers = () => {
+        setList(FilterPriceLower(list))
+        setLoding(true)
+        setTimeout(() => {
+            setLoding(false)
+        }, 1500);   
+    }
+
+    const FilterPriceHighests = () => {
+        setList(FilterPriceHighest(list))
+        setLoding(true)
+        setTimeout(() => {
+            setLoding(false)
+        }, 1500); 
+    }
 
     const nextPage = () => {
         setCurrentPage(currentPage +1)
@@ -32,10 +50,14 @@ export const usePagination = () => {
         setLoding(true)
         setTimeout(() => {
             setLoding(false)
-        }, 1500);
-        
+        }, 1500); 
     }
 
-    return [currentList, currentPage, indexOfLast, loading, nextPage, previousPage]
+
+
+    
+    
+
+    return [currentList, currentPage, indexOfLast, loading, nextPage, previousPage, filterPriceLowers, FilterPriceHighests]
 
 }

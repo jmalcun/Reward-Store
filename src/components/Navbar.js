@@ -1,7 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { ContextValues } from './Context'
 import { MenuItems } from './MenuItems'
 
 export const Navbar = () => {
+
+    const {user} = useContext(ContextValues)
+    const {name, points} = user
 
     const [openMenu, setOpenMenu] = useState(false)
     const [state, setState] = useState(false)
@@ -37,9 +41,10 @@ export const Navbar = () => {
             }   
             </div>
             <div className="user-box">
-                <p>nombre usuario</p>
+                <i className="fas fa-user"></i>
+                <p className="name-user">{name}</p>
                 <div className="coins">
-                    <p>3000</p>
+                    <p>{points}</p>
                     <i className="fas fa-coins"></i>
                 </div>
             </div>

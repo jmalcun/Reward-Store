@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import spiner from '../assets/icons/loading.svg'
 import { CardProduct } from './CardProduct'
+import { ContextValues } from './Context'
 import { PageControl } from './PageControl'
 
-export const CardGrid = ({currentList, loading, currentPage, nextPage, previousPage}) => {
+export const CardGrid = () => {
 
-    
+    const {currentList, loading, currentPage, nextPage, previousPage} = useContext(ContextValues)
     
     return (
         <>
@@ -15,7 +16,7 @@ export const CardGrid = ({currentList, loading, currentPage, nextPage, previousP
                     ?currentList.map( p => (
                         <CardProduct key={p._id} {...p} />
                     ))
-                    :<img className="loading" src={spiner} />
+                    :<img className="loading" src={spiner} alt="loading"/>
             }
             
         </div>

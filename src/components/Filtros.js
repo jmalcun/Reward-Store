@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ButtonsNextPreious } from './ButtonsNextPreious'
+import {ContextValues} from './Context'
 
-export const Filtros = ({indexOfLast, currentPage, nextPage, previousPage}) => {
+export const Filtros = () => {
+
+    const {indexOfLast, currentPage, nextPage, previousPage, filterPriceLowers, FilterPriceHighests} = useContext(ContextValues)
+
+    
 
     return (
         <div className="filters-data">
@@ -12,39 +18,10 @@ export const Filtros = ({indexOfLast, currentPage, nextPage, previousPage}) => {
             <div className="filters">
                 <p className="ff-source-sans-pro">Sort by:</p>
                 <button className="btn">Most recent</button>
-                <button className="btn">Lowest price</button>
-                <button className="btn">Highest price</button>
+                <button className="btn" onClick={filterPriceLowers}>Lowest price</button>
+                <button className="btn" onClick={FilterPriceHighests}>Highest price</button>
             </div>
-            {
-                    (currentPage > 1)
-                        ?<div className="page-control-buttons">
-                            <button 
-                                onClick={previousPage} 
-                                className="color-15dbff"
-                            >
-                                <i className="far fa-arrow-alt-circle-left color-darkgrey"></i>
-                            </button>
-                            <button 
-                                disabled="true" 
-                                onClick={nextPage} 
-                            >
-                                <i className="far fa-arrow-alt-circle-right"></i>
-                            </button>
-                        </div>
-                        :<div className="page-control-buttons">  
-                            <button 
-                                disabled="true"  
-                                onClick={previousPage}
-                            >
-                                <i className="far fa-arrow-alt-circle-left"></i>
-                            </button>
-                            <button 
-                                onClick={nextPage}
-                            >
-                                <i className="far fa-arrow-alt-circle-right color-darkgrey"></i>
-                            </button> 
-                        </div>     
-                }    
+            <ButtonsNextPreious currentPage={currentPage} nextPage={nextPage} previousPage={previousPage} />          
         </div>
     )
 }

@@ -9,7 +9,7 @@ export const CardProduct = ({name,cost,category, img}) => {
             <div className="card-product">
                 <button className="shopping-button"><i className="fas fa-shopping-bag"></i></button>
                 <div className="img-contain">
-                    <img src={url}></img>
+                    <img src={url} alt="img"></img>
                 </div>
                 <div className="description">
                     <p className="type">{category}</p>

@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HomeScreen } from './components/HomeScreen';
-import { AppRouter } from './routes/AppRouter';
+import {MainApp} from "./components/MainApp"
 import './styles/styles.css'
 
 
+
 ReactDOM.render(
-    <AppRouter />,
+  <MainApp />,
   document.getElementById('root')
 );
 
