@@ -15,7 +15,7 @@ export const Redeem = () => {
     
     return (
         <>
-            <h1 className="history-title"><span>{name}</span> welcome to your purchase history</h1>
+            <h1 className="history-title"><span className="color-266894">{name}</span> welcome to your purchase history</h1>
             <div className="history-table">
                 <div className="table">
                     <div className="table-item"><h2>Date</h2><i className="fas fa-calendar-alt color-15dbff"></i></div>

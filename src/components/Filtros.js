@@ -17,9 +17,9 @@ export const Filtros = () => {
             </div>
             <div className="filters">
                 <p className="ff-source-sans-pro">Sort by:</p>
-                <button className="btn">Most recent</button>
-                <button className="btn" onClick={filterPriceLowers}>Lowest price</button>
-                <button className="btn" onClick={FilterPriceHighests}>Highest price</button>
+                <button className="btn background-d8d7d7">Most recent</button>
+                <button className="btn background-d8d7d7" onClick={filterPriceLowers}>Lowest price</button>
+                <button className="btn background-d8d7d7" onClick={FilterPriceHighests}>Highest price</button>
             </div>
             <ButtonsNextPreious currentPage={currentPage} nextPage={nextPage} previousPage={previousPage} />          
         </div>
