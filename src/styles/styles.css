@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 *{
     box-sizing: border-box;
@@ -24,6 +25,18 @@ body{
 
 .color-darkgrey{
     color: #6e6b6b;
+}
+
+.color-f1d87d{
+    color: #f1d87d;
+}
+
+.color-5c2da0{
+    color: #5c2da0;
+}
+
+.color-266894{
+    color: #266894;
 }
 
 .color-disabled{
@@ -361,4 +374,62 @@ body{
     background-color: transparent;
     outline: none;
     cursor: pointer;
+}
+
+/*HISTORY*/
+.history-title{
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Lobster';
+    letter-spacing: 1.2px;
+    color: #616161;
+    font-size: 40px;
+}
+
+.history-title span{
+    color: #1f7fc0;
+}
+
+.history-table{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.table{
+    width: 100%;
+    display: flex;
+    height: 80px;
+}
+
+.table-item{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.table-item i{
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+
+.category{
+    text-align: center;
+    width: 20%;
+}
+
+.name-product{
+    text-align: center;
+    width: 20%;
+}
+
+.price-product{
+    text-align: center;
+    width: 20%;
+}
+
+.image-product{
+    width: 20%;
 }

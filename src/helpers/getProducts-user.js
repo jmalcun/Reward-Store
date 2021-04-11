@@ -10,7 +10,13 @@ export const getProductsOrUser = async(key) => {
             const resp1 = await fetch(`${baseUrl}/${key}/me`, {headers});
             const data = await resp1.json();
             return data
-        }else{
+        }
+        if(key === "history"){
+            const resp1 = await fetch(`${baseUrl}/user/${key}`, {headers});
+            const data = await resp1.json();
+            return data
+        }
+        if(key === "products"){
             const resp = await fetch(`${baseUrl}/${key}`, {headers});
             const data = await resp.json();
             return data
