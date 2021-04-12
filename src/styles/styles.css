@@ -541,10 +541,18 @@ body{
 .img-result-cotain{
     width: 400px;
     height: 400px;
+    display: flex;
+    justify-content: center;
 }
 
 .img-result-cotain img{
     width: 100%;
     height: 100%;
     background-color: transparent;
+}
+
+.btn-cofre{
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
