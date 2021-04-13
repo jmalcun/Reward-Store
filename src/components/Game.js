@@ -6,7 +6,16 @@ import { randomNum } from '../helpers/random'
 
 export const Game = ({counter, setCounter, setTotal}) => {
 
-    const [vibrar, setVibrar] = useState(null)
+    const[abrir, setAbrir] = useState(false)
+
+    const [vibrar, setVibrar] = useState({
+        vibrar1:null,
+        vibrar2:null,
+        vibrar3:null,
+        vibrar4:null,
+        vibrar5:null,
+        vibrar6:null
+    })
     const [chestOpen, setChestOpen] = useState({
         cofre1:false,
         cofre2:false,
@@ -26,23 +35,26 @@ export const Game = ({counter, setCounter, setTotal}) => {
 
     const {cofre1,cofre2,cofre3,cofre4,cofre5,cofre6} = chestOpen
     const {valor1,valor2,valor3,valor4, valor5, valor6} = valor
+    const {vibrar1,vibrar2,vibrar3,vibrar4,vibrar5,vibrar6} = vibrar
 
     const cambiarClassName = () => {
-        if(vibrar){
-            return "chest animate__animated animate__shakeX"
-        }    
-        return "chest"
-
+         return "chest animate__animated animate__shakeX"
     }
 
     const handleClick = ({target}) =>{
         if(counter < 2){
-            setVibrar(true)
+            setVibrar({
+                ...vibrar,
+                [target.id]: true
+            })
             setTimeout(() => {
-                setVibrar(false)
+                setVibrar({
+                    ...vibrar,
+                    [target.id]: false
+                })
                 setChestOpen({
                     ...chestOpen,
-                    [target.alt] : !vibrar
+                    [target.alt] : !abrir
                 })
             }, 1000);
             setValor({
@@ -68,12 +80,14 @@ export const Game = ({counter, setCounter, setTotal}) => {
                     className="btn-cofre" 
                     disabled={cofre1} 
                     onClick={(e) => handleClick(e)}
+                   
                     >
                         <img 
                         name="valor1" 
-                        className={cambiarClassName()}  
+                        className={(vibrar1) ?cambiarClassName() :"chest"}  
                         src={(cofre1) ?cofreAbierto :cofre} 
                         alt="cofre1"
+                        id="vibrar1"
                         />
                     </button>
                 </div>
@@ -83,12 +97,14 @@ export const Game = ({counter, setCounter, setTotal}) => {
                     className="btn-cofre"
                     disabled={cofre2} 
                     onClick={handleClick}
+                  
                     >
                         <img 
                         name="valor2" 
-                        className={cambiarClassName()}  
+                        className={(vibrar2) ?cambiarClassName() :"chest"}  
                         src={(cofre2) ?cofreAbierto :cofre} 
                         alt="cofre2"
+                        id="vibrar2"
                         />
                     </button>
                 </div>
@@ -101,9 +117,10 @@ export const Game = ({counter, setCounter, setTotal}) => {
                     >
                         <img 
                         name="valor3" 
-                        className={cambiarClassName()} 
+                        className={(vibrar3) ?cambiarClassName() :"chest"} 
                         src={(cofre3) ?cofreAbierto :cofre} 
                         alt="cofre3"
+                        id="vibrar3"
                         />
                     </button>
                 </div>
@@ -116,9 +133,10 @@ export const Game = ({counter, setCounter, setTotal}) => {
                     >
                         <img 
                         name="valor4" 
-                        className={cambiarClassName()} 
+                        className={(vibrar4) ?cambiarClassName() :"chest"} 
                         src={(cofre4) ?cofreAbierto :cofre} 
                         alt="cofre4"
+                        id="vibrar4"
                         />
                     </button>  
                 </div>
@@ -131,9 +149,10 @@ export const Game = ({counter, setCounter, setTotal}) => {
                     >
                         <img 
                         name="valor5" 
-                        className={cambiarClassName()} 
+                        className={(vibrar5) ?cambiarClassName() :"chest"} 
                         src={(cofre5) ?cofreAbierto :cofre} 
                         alt="cofre5"
+                        id="vibrar5"
                         />
                     </button>
                 </div>
@@ -146,9 +165,10 @@ export const Game = ({counter, setCounter, setTotal}) => {
                     >
                         <img 
                         name="valor6" 
-                        className={cambiarClassName()} 
+                        className={(vibrar6) ?cambiarClassName() :"chest"} 
                         src={(cofre6) ?cofreAbierto :cofre} 
                         alt="cofre6"
+                        id="vibrar6"
                         />
                     </button>
                 </div>   
