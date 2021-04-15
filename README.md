@@ -1,3 +1,6 @@
+### Description
+Pagina web que simula una e-comerce, en la cual cree un juego donde obtener monedas, utilizo React, React-router-DOM , Context y consumo la API de "aerolab-chalenge".
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
