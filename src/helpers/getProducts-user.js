@@ -24,6 +24,19 @@ export const getProductsOrUser = async(key) => {
     } catch (error) {
         console.log(error)
     }
-    
+}
 
+export const postPoints = async(points) => {
+    
+    try {
+        await fetch(`${baseUrl}/user/points`,{
+            method: 'POST',
+            body: JSON.stringify({amount: points}),
+            headers: headers
+        })
+    
+    } catch (error) {
+        console.log(error)
+    }
+    
 }

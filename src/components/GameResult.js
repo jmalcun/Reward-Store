@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import homerHappy from '../assets/imagenes/homer-happy.jpg'
 import homerSad from '../assets/imagenes/homer-sad.jpg'
 import Modal from 'react-modal';
+import { postPointsFilter } from '../helpers/postPointsFilter';
  
 const customStyles = {
   content : {
@@ -17,14 +18,16 @@ Modal.setAppElement('#root')
 
 export const GameResult = ({total, setStartGame}) => {
 
-    const [modalIsOpen,setIsOpen] = useState(true);
+    setTimeout(() => {
+        setStartGame(false) 
+        window.location.reload()
+    }, 5000);
 
     useEffect(() => {
-        setTimeout(() => {
-            setStartGame(false) 
-        }, 5000);
-    }, [])
-
+        if(total !== 0){
+            postPointsFilter(total)
+        } 
+    }, [total])
 
     return (
         <div>
@@ -32,22 +35,22 @@ export const GameResult = ({total, setStartGame}) => {
                 (total > 0)
                     ?<div className="result-div">
                         <Modal
-                            isOpen={modalIsOpen}
+                            isOpen={true}
                             style={customStyles}
                         >
                         <div className="img-result-cotain">
-                            <img src={homerHappy}></img>
+                            <img src={homerHappy} alt="homer-Happy"></img>
                         </div>
                         <h1>congratulations you added {total} points</h1>
                         </Modal>
                     </div>
                     :<div className="result-div">
                         <Modal
-                            isOpen={modalIsOpen}
+                            isOpen={true}
                             style={customStyles}
                         >
                         <div className="img-result-cotain">
-                            <img src={homerSad}></img>
+                            <img src={homerSad} alt="homer-sad"></img>
                         </div>
                         <h1>you have not added coins, try it next week</h1>
                         </Modal>
