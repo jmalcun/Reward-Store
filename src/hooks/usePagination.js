@@ -8,7 +8,7 @@ export const usePagination = () => {
     const [list, setList] = useState([]) 
     const [currentPage, setCurrentPage] = useState(1)
     const [postPerPage, setPostPerPage] = useState(16)
-    const [loading, setLoding] = useState(false)
+    const [loading, setLoading] = useState(false)
     
     useEffect(() => {
         getProductsOrUser("products")
@@ -22,17 +22,17 @@ export const usePagination = () => {
 
     const nextPage = () => {
         setCurrentPage(currentPage +1)
-        setLoding(true)
+        setLoading(true)
         setTimeout(() => {
-            setLoding(false)
+            setLoading(false)
         }, 1500);
     }
 
     const previousPage = () => {
         setCurrentPage(currentPage -1)
-        setLoding(true)
+        setLoading(true)
         setTimeout(() => {
-            setLoding(false)
+            setLoading(false)
         }, 1500); 
     }
     
@@ -40,19 +40,19 @@ export const usePagination = () => {
     //FILTROS    
     const filterPriceLowers = () => {
         setList(FilterPriceLower(list))
-        setLoding(true)
+        setLoading(true)
         setTimeout(() => {
-            setLoding(false)
+            setLoading(false)
         }, 1500);   
     }
 
     const FilterPriceHighests = () => {
         setList(FilterPriceHighest(list))
-        setLoding(true)
+        setLoading(true)
         setTimeout(() => {
-            setLoding(false)
+            setLoading(false)
         }, 1500); 
     }
 
-    return [currentList, currentPage, indexOfLast, loading, nextPage, previousPage, filterPriceLowers, FilterPriceHighests]
+    return [currentList, currentPage, indexOfLast, loading, setLoading, nextPage, previousPage, filterPriceLowers, FilterPriceHighests]
 }

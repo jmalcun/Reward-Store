@@ -4,10 +4,10 @@ import React from 'react'
 export const CardHistory = ({name, cost, category, createDate, img}) => {
     
     const {url} = img
-    const fecha = createDate.slice(0,10)
-    console.log(img)
+    const recorte = createDate.slice(0,10)
+    const fechaFormat = new Date(recorte)
+    const fecha = `${fechaFormat.getDay()}/${fechaFormat.getMonth()}/${fechaFormat.getUTCFullYear()}`
     
-
     return (
         <>
             <div className="table">

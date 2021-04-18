@@ -8,9 +8,9 @@ export const Redeem = () => {
     
     const {name,redeemHistory} = user
     
-    let hola=[]
+    let history10=[]
     if(redeemHistory !== undefined){
-        hola= redeemHistory.slice(1,10)
+        history10 = redeemHistory.slice(1,10)
     }
     
     return (
@@ -25,8 +25,8 @@ export const Redeem = () => {
                     <div className="table-item"><h2>Image</h2><i className="far fa-file-image color-darkgrey"></i></div>
                 </div>
                 {
-                    (hola.length > 0)
-                        &&hola.map( p => (
+                    (history10.length > 0)
+                        &&history10.map( p => (
                             <CardHistory key={p._id} {...p} />
                         )) 
                 }

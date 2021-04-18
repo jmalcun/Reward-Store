@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { ButtonsNextPreious } from './ButtonsNextPreious'
-export const PageControl = ({currentPage, nextPage, previousPage}) => {
+import { ContextValues } from './Context'
+
+
+export const PageControl = () => {
     
+    const {currentPage} = useContext(ContextValues)
+
     return (
         
         <div className="page-control">
-            <p>Number Page</p>
-            <ButtonsNextPreious currentPage={currentPage} nextPage={nextPage} previousPage={previousPage} /> 
+            <p>Page {currentPage}</p>
+            <ButtonsNextPreious /> 
         </div>
     )
 }

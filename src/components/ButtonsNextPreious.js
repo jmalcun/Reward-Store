@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ContextValues } from './Context'
 
-export const ButtonsNextPreious = ({currentPage, nextPage, previousPage}) => {
+export const ButtonsNextPreious = () => {
 
+    const {currentPage, nextPage, previousPage} = useContext(ContextValues)
 
     return (
         (currentPage > 1)

@@ -4,7 +4,7 @@ import {ContextValues} from './Context'
 
 export const Filtros = () => {
 
-    const {indexOfLast, currentPage, nextPage, previousPage, filterPriceLowers, FilterPriceHighests} = useContext(ContextValues)
+    const {indexOfLast, filterPriceLowers, FilterPriceHighests} = useContext(ContextValues)
 
     
 
@@ -21,7 +21,7 @@ export const Filtros = () => {
                 <button className="btn background-d8d7d7" onClick={filterPriceLowers}>Lowest price</button>
                 <button className="btn background-d8d7d7" onClick={FilterPriceHighests}>Highest price</button>
             </div>
-            <ButtonsNextPreious currentPage={currentPage} nextPage={nextPage} previousPage={previousPage} />          
+            <ButtonsNextPreious/>          
         </div>
     )
 }

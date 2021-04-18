@@ -6,7 +6,7 @@ import { getProductsOrUser } from '../helpers/getProducts-user'
 
 export const MainApp = () => {
 
-    const [currentList, currentPage, indexOfLast, loading,  nextPage, previousPage, filterPriceLowers, FilterPriceHighests] = usePagination()
+    const [currentList, currentPage, indexOfLast, loading, setLoading,  nextPage, previousPage, filterPriceLowers, FilterPriceHighests] = usePagination()
     const [user, setUser] = useState({})
 
     useEffect(() => {
@@ -22,6 +22,7 @@ export const MainApp = () => {
             currentPage,
             indexOfLast,
             loading,
+            setLoading,
             nextPage,
             previousPage,
             filterPriceLowers,

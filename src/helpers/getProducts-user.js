@@ -40,3 +40,15 @@ export const postPoints = async(points) => {
     }
     
 }
+
+export const postProdruct = async(id) => {
+    try {
+        await fetch(`${baseUrl}/redem`,{
+            method: 'POST',
+            body: JSON.stringify({productId: id}),
+            headers: headers
+        })
+    } catch (error) {
+        console.log(error)
+    }
+} 
