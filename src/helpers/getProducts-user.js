@@ -1,7 +1,9 @@
+import Swal from "sweetalert2";
+
 const baseUrl = "https://coding-challenge-api.aerolab.co"
 const headers = {
     "content-type": "application/json",
-    Authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWRkOWU5OTQ0NGZlNDAwNmRhOTkyNGQiLCJpYXQiOjE1OTE1ODIzNjF9.-f40dyUIGFsBSB_PTeBGdSLI58I21-QBJNi9wkODcKk"
+    Authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdjYTdmNTc2NmZiNTAwMjRhYTg3OWIiLCJpYXQiOjE2MTg3ODIxOTd9.-tsDYfQKamvheGQe4p1dEAJl6ar7C7ENPLFDQTFmCmU"
 }
 
 export const getProductsOrUser = async(key) => {
@@ -22,7 +24,7 @@ export const getProductsOrUser = async(key) => {
             return data
         }
     } catch (error) {
-        console.log(error)
+        Swal.fire("something went wrong", "try again in a few minutes", "error")
     }
 }
 
@@ -34,21 +36,20 @@ export const postPoints = async(points) => {
             body: JSON.stringify({amount: points}),
             headers: headers
         })
-    
     } catch (error) {
-        console.log(error)
+        Swal.fire("something went wrong", "try again in a few minutes", "error")
     }
     
 }
 
 export const postProdruct = async(id) => {
     try {
-        await fetch(`${baseUrl}/redem`,{
+        await fetch(`${baseUrl}/redeem`,{
             method: 'POST',
             body: JSON.stringify({productId: id}),
             headers: headers
         })
     } catch (error) {
-        console.log(error)
+        Swal.fire("something went wrong", "try again in a few minutes", "error")
     }
 } 

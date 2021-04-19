@@ -26,6 +26,18 @@ body{
     margin-top: 10px;
 }
 
+.margin-right-3{
+    margin-right: 3px;
+}
+
+.margin-right-5{
+    margin-right: 5px;
+}
+
+.margin-left-15{
+    margin-left: 55px;
+}
+
 .color-white{
     color: white;
 }
@@ -74,8 +86,17 @@ body{
     background-color: #d8d7d7;
 }
 
-.fill-disabled{
-    fill: rgba(211, 211, 211, 0.822);
+.btn-disabled{
+    background-color: rgba(128, 128, 128, 0.644);
+    width: 187px;
+    height: 42px;
+    margin: 0 auto;
+    border-radius: 20px;
+    color: darkgrey;
+    font-size: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    outline: none;
 }
 
 .animation1{
@@ -146,9 +167,9 @@ body{
     border: none;
     outline: none;
     font-size: 18px;
+    color: white;
+    position: relative;
 }
-
-
 
 /*HEADER*/
 .header{
@@ -286,9 +307,55 @@ body{
     align-items: center;
 }
 
-.filters p{
+.sort-by{
     color: #A3A3A3;
     font-size: 24px;
+}
+
+.select{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.listStyle{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 87%;
+    top: 94%;
+    left: 7.2%;
+    border: transparent;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    z-index: 10;
+    background-color: #15dcffbe;
+}
+
+.listStyle li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 5px;
+    height: 30px;
+}
+.listStyle li option{
+    width: 90%;
+}
+
+.listStyle li:hover{
+    box-shadow: 0px 0px 2px 2px inset;
+}
+
+.listStyle li:first-child{
+    margin-top: 10px;
+}
+
+.listStyle li:first-child:hover{
+    margin-top: 10px;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
 }
 
 /*CARD-GRID*/
@@ -378,6 +445,26 @@ body{
     left: 80%;
     border: none;
     margin-bottom: 15px;
+}
+
+.btn-missing{
+    height: 42px;
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: #616161;
+    position: absolute;
+    top: 3%;
+    left: 45%;
+    border: none;
+    opacity: 0.7;
+    color: white;
+}
+
+.btn-missing i{
+    margin-left: 10px;
 }
 
 .shopping-button i{
@@ -481,6 +568,12 @@ body{
     height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.table-item img{
+    height: 100%;
+    margin-bottom: 25px;
 }
 
 .table-item i{

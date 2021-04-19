@@ -6,7 +6,7 @@ import { getProductsOrUser } from '../helpers/getProducts-user'
 
 export const MainApp = () => {
 
-    const [currentList, currentPage, indexOfLast, loading, setLoading,  nextPage, previousPage, filterPriceLowers, FilterPriceHighests] = usePagination()
+    const [list, setList, currentList, currentPage, indexOfLast, loading, setLoading,  nextPage, previousPage, filterPriceLowers, FilterPriceHighests] = usePagination()
     const [user, setUser] = useState({})
 
     useEffect(() => {
@@ -18,6 +18,8 @@ export const MainApp = () => {
         <ContextValues.Provider value={{
             user,
             setUser,
+            list,
+            setList,
             currentList,
             currentPage,
             indexOfLast,

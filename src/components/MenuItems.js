@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 export const MenuItems = ({state}) => {
 
     
-
     return (
         <ul className={(state) ?"list-menu-items animate__animated animate__fadeInLeft" :"list-menu-items animate__animated animate__fadeOutLeft"}>
             <Link className="link background-bd6096" to="/">Home</Link>  

@@ -1,17 +1,21 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { getProductsOrUser } from '../helpers/getProducts-user'
 import { CardHistory } from './CardHistory'
 import {ContextValues} from './Context'
 
 export const Redeem = () => {
     
     const {user} = useContext(ContextValues)
-    
     const {name,redeemHistory} = user
+
+    const [historial, setHistorial] = useState([])
     
-    let history10=[]
-    if(redeemHistory !== undefined){
-        history10 = redeemHistory.slice(1,10)
-    }
+    console.log(historial)
+    
+    useEffect(() => {
+        getProductsOrUser("history")
+            .then(p => setHistorial(p))
+    }, [redeemHistory])
     
     return (
         <>
@@ -25,9 +29,9 @@ export const Redeem = () => {
                     <div className="table-item"><h2>Image</h2><i className="far fa-file-image color-darkgrey"></i></div>
                 </div>
                 {
-                    (history10.length > 0)
-                        &&history10.map( p => (
-                            <CardHistory key={p._id} {...p} />
+                    (historial.length > 0)
+                        &&historial.map( p => (
+                            <CardHistory key={Date.now()} {...p} />
                         )) 
                 }
             </div>
