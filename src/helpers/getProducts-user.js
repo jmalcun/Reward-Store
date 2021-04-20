@@ -9,13 +9,13 @@ const headers = {
 export const getProductsOrUser = async(key) => {
     try {
         if(key === "user"){
-            const resp1 = await fetch(`${baseUrl}/${key}/me`, {headers});
-            const data = await resp1.json();
+            const resp = await fetch(`${baseUrl}/${key}/me`, {headers});
+            const data = await resp.json();
             return data
         }
         if(key === "history"){
-            const resp1 = await fetch(`${baseUrl}/user/${key}`, {headers});
-            const data = await resp1.json();
+            const resp = await fetch(`${baseUrl}/user/${key}`, {headers});
+            const data = await resp.json();
             return data
         }
         if(key === "products"){

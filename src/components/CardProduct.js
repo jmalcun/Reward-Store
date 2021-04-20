@@ -48,7 +48,7 @@ export const CardProduct = ({_id,name,cost,category, img, loadingMousse, setLoad
                     {
                         (points >= cost)
                             ? <button className="shopping-button"><i className="fas fa-shopping-bag"></i></button>
-                            : <button className="btn-missing">you need {faltan} <i className="fas fa-coins color-f1d87d"></i></button>
+                            : <button disabled={true} className="btn-missing">you need {faltan} <i className="fas fa-coins color-f1d87d"></i></button>
                     }
                    
                     <div className="description">

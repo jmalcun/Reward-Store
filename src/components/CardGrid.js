@@ -18,12 +18,12 @@ export const CardGrid = () => {
                         ?currentList.map( p => (
                             <CardProduct key={p._id} {...p} loadingMousse={loadingMousse} setLoadingMousse= {setLoadingMousse}/>
                         ))
-                        :<img className="loading" src={spiner} alt="loading"/>
+                        :<img className="loading animation-girar" src={spiner} alt="loading"/>
                     : (list.length !== 0 && !loading)
                         ?list.map( p => (
                             <CardProduct key={p._id} {...p} loadingMousse={loadingMousse} setLoadingMousse={setLoadingMousse}/>
                         ))
-                        :<img className="loading" src={spiner} alt="loading"/>   
+                        :<img className="loading animation-girar" src={spiner} alt="loading"/>   
             }
             
         </div>

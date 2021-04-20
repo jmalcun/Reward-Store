@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 *{
     box-sizing: border-box;
@@ -32,10 +33,6 @@ body{
 
 .margin-right-5{
     margin-right: 5px;
-}
-
-.margin-left-15{
-    margin-left: 55px;
 }
 
 .color-white{
@@ -132,6 +129,19 @@ body{
     }
 }
 
+.animation-carrito{
+    animation: carrito 12s infinite ease;
+}
+
+@keyframes carrito{
+    from{
+        transform: translateX(-150%);
+    }
+    to{
+        transform: translateX(1%);
+    }
+}
+
 .margin-left-5{
     margin-left: 5px;
 }
@@ -143,6 +153,10 @@ body{
 .loading{
     width: 5%;
     height: 5%;
+   
+}
+
+.animation-girar{
     animation: girar 2s infinite linear;
 }
 
@@ -152,6 +166,45 @@ body{
     }
     to{
         transform: rotateZ(360deg);
+    }
+}
+
+.animation-moneda1{
+    animation: moneda1 2s infinite ease
+}
+
+@keyframes moneda1{
+    from{
+        transform: translateY(-100%)
+    }
+    to{
+        transform: translateY(1300%)
+    }
+}
+
+.animation-moneda2{
+    animation: moneda2 3s infinite ease
+}
+
+@keyframes moneda2{
+    from{
+        transform: translateY(-100%)
+    }
+    to{
+        transform: translateY(1300%)
+    }
+}
+
+.animation-moneda3{
+    animation: moneda3 4s infinite ease
+}
+
+@keyframes moneda3{
+    from{
+        transform: translateY(-100%)
+    }
+    to{
+        transform: translateY(1300%)
     }
 }
 
@@ -171,9 +224,67 @@ body{
     position: relative;
 }
 
+.btn:hover{
+    box-shadow: 0px 0px 0px 2px white ;
+}
+
 /*HEADER*/
 .header{
     width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.title-page{
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    letter-spacing: 1.5px;
+    color: rgb(18, 107, 122)
+}
+
+.title-page span{
+    font-size: 60px;
+    color: rgba(253, 253, 253, 0.815);
+   
+}
+
+.carrito{
+    height: 50px;
+    position: absolute;
+    top: 88.1%;
+}
+
+.celu{
+    height: 35px;
+    margin-right: 25px;
+    margin-left: 45px;
+}
+
+.tele{
+    height: 35px;
+    margin-right: 25px;
+}
+
+.juego{
+    height: 35px;
+    margin-right: 25px;
+}
+
+.div-coins{
+    width: 390%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    height: 50px;
+    position: absolute;
+    top: 90.5%;
+}
+
+.coinn{
+    height: 40px;
 }
 
 /*DATA-USER*/
@@ -312,11 +423,6 @@ body{
     font-size: 24px;
 }
 
-.select{
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
 .listStyle{
     list-style: none;
     display: flex;
@@ -332,6 +438,16 @@ body{
     background-color: #15dcffbe;
 }
 
+.cat{
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.arrow{
+    margin-left: 20px;
+    font-size: 15px;
+}
+
 .listStyle li{
     display: flex;
     justify-content: space-between;
@@ -340,8 +456,9 @@ body{
     padding-right: 5px;
     height: 30px;
 }
+
 .listStyle li option{
-    width: 90%;
+    width: 150%;
 }
 
 .listStyle li:hover{
