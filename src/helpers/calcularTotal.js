@@ -1,3 +1,4 @@
+/* Calcular total de monedas */
 export const calcularTotal = (objeto) => {
     let total=0
     Object.entries(objeto).forEach(([key, value]) => {

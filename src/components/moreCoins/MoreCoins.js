@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react'
-import { ContextValues } from './Context'
-import buttonStart from '../assets/icons/power-button.svg'
-import buttonGreen from '../assets/icons/power.svg'
-import rules from '../assets/icons/rules.svg'
+import { ContextValues } from '../context/Context'
+import buttonStart from '../../assets/icons/power-button.svg'
+import buttonGreen from '../../assets/icons/power.svg'
+import rules from '../../assets/icons/rules.svg'
 import Swal from 'sweetalert2'
 import { ChestGame } from './ChestGame'
 
@@ -22,7 +22,7 @@ export const MoreCoins = () => {
             imageWidth: 400,
             imageHeight: 100,
             imageAlt: 'Custom image',
-            text: 'Only 3 chests have coins, 1000, 5000 or 7500, you have only 2 opportunities, good luck!',
+            text: 'Only 2 chests have coins, 1000, 5000 or 7500, you have only 2 opportunities, good luck!',
             showClass: {
               popup: 'animate__animated animate__fadeInDown'
             },

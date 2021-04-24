@@ -3,7 +3,7 @@ import Swal from "sweetalert2";
 const baseUrl = "https://coding-challenge-api.aerolab.co"
 const headers = {
     "content-type": "application/json",
-    Authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDdjYTdmNTc2NmZiNTAwMjRhYTg3OWIiLCJpYXQiOjE2MTg3ODIxOTd9.-tsDYfQKamvheGQe4p1dEAJl6ar7C7ENPLFDQTFmCmU"
+    Authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDgzNTZmMDc2NmZiNTAwMjRhYTg3OWYiLCJpYXQiOjE2MTkyMjAyMDh9.IXTEJp6teMtdvEWS9DWO1rxKAMtYCksaoyv44ud_c5o"
 }
 
 export const getProductsOrUser = async(key) => {
@@ -36,6 +36,7 @@ export const postPoints = async(points) => {
             body: JSON.stringify({amount: points}),
             headers: headers
         })
+        getProductsOrUser("user")
     } catch (error) {
         Swal.fire("something went wrong", "try again in a few minutes", "error")
     }

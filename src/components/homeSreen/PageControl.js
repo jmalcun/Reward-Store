@@ -1,16 +1,16 @@
 import React, { useContext } from 'react'
 import { ButtonsNextPreious } from './ButtonsNextPreious'
-import { ContextValues } from './Context'
+import { ContextValues } from '../context/Context'
 
 
 export const PageControl = () => {
     
-    const {currentPage} = useContext(ContextValues)
+    const {list,currentPage} = useContext(ContextValues)
 
     return (
         
         <div className="page-control">
-            <p>Page {currentPage}</p>
+            <p>Page {(list.length > 16)?currentPage :1}</p>
             <ButtonsNextPreious /> 
         </div>
     )

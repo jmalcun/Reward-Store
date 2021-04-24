@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ContextValues } from './Context'
+import { ContextValues } from './context/Context'
 import { AppRouter } from '../routes/AppRouter'
 import { usePagination } from '../hooks/usePagination'
 import { getProductsOrUser } from '../helpers/getProducts-user'
@@ -11,9 +11,9 @@ export const MainApp = () => {
 
     useEffect(() => {
        getProductsOrUser("user")
-            .then( u => setUser(u))
+            .then( userInfo => setUser(userInfo))
     }, [])
-
+    
     return (
         <ContextValues.Provider value={{
             user,

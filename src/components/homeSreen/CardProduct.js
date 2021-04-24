@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
 import Swal from 'sweetalert2';
-import { postProdruct } from '../helpers/getProducts-user';
-import { simulateError } from '../helpers/simulateError';
-import { ContextValues } from './Context';
+import { getProductsOrUser, postProdruct } from '../../helpers/getProducts-user';
+import { simulateError } from '../../helpers/simulateError';
+import { ContextValues } from '../context/Context';
 
 
 export const CardProduct = ({_id,name,cost,category, img, loadingMousse, setLoadingMousse}) => {
 
-    const {user} = useContext(ContextValues)
+    const {user, setUser} = useContext(ContextValues)
     const {url} = img
     const {points} = user
     const faltan = cost - points;
@@ -22,7 +22,8 @@ export const CardProduct = ({_id,name,cost,category, img, loadingMousse, setLoad
                 Swal.fire("congratulations on your purchase!",`Product: ${name}`,"success")
                     .then((result) => {
                     if (result.isConfirmed) {
-                      window.location.reload()
+                        getProductsOrUser("user")
+                            .then( userInfo => setUser(userInfo))
                     }
                 })
                

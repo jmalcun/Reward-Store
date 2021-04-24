@@ -1,5 +1,6 @@
+/* FILTRO POR CATEGORIA */
 export const filterCategory = (array,category) => {
-    if(category === "todos"){
+    if(category === "All"){
         return array
     }
     if(category === "Computing"){

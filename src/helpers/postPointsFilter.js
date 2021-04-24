@@ -1,7 +1,6 @@
 import { postPoints } from "./getProducts-user"
 
 export const postPointsFilter = (points) => {
-    console.log(points)
     if(points === 1000){
         postPoints(1000)
     }

@@ -1,14 +1,14 @@
 import React from 'react'
-import { HomeScreen } from '../components/HomeScreen';
-import { Redeem } from '../components/Redeem'
-import { MoreCoins } from '../components/MoreCoins'
+import { HomeScreen } from '.././components/homeSreen/HomeScreen';
+import { Redeem } from '.././components/history/Redeem'
+import { MoreCoins } from '.././components/moreCoins/MoreCoins'
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Redirect
   } from "react-router-dom";
-import { Navbar } from '../components/Navbar';
+import { Navbar } from '../components/homeSreen/Navbar';
 
 
 export const AppRouter = () => {

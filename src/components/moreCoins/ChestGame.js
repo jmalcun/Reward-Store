@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import spiner from '../assets/icons/loading.svg'
-import { calcularTotal } from '../helpers/calcularTotal'
+import spiner from '../../assets/icons/loading.svg'
+import { calcularTotal } from '../../helpers/calcularTotal'
 import { Game } from './Game'
 import { GameResult } from './GameResult'
 
@@ -35,7 +35,7 @@ export const ChestGame = ({setStartGame}) => {
                 :(!loading)
                     ?<GameResult total={total} setStartGame={setStartGame}/>
                     :<div className="loading-result">
-                        <img className="loading margin-0-auto" src={spiner} alt="loading"/>
+                        <img className="loading margin-0-auto animation-girar" src={spiner} alt="loading"/>
                     </div>
                     
         

@@ -1,8 +1,7 @@
 import React from 'react'
-import headerImg from '../assets/imagenes/header-x1.png'
-import carrito from '../assets/icons/trolley.svg'
-
-import coin from '../assets/icons/coin.svg'
+import headerImg from '../../assets/imagenes/header-x1.png'
+import carrito from '../../assets/icons/trolley.svg'
+import coin from '../../assets/icons/coin.svg'
 
 export const Header = () => {
     return (

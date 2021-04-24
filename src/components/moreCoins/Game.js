@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import cofre from '../assets/icons/treasure.svg'
-import cofreAbierto from '../assets/icons/treasureOpen.svg'
-
-import { randomNum } from '../helpers/random'
+import cofre from '../../assets/icons/treasure.svg'
+import cofreAbierto from '../../assets/icons/treasureOpen.svg'
+import { randomNum } from '../../helpers/random'
 
 export const Game = ({counter, setCounter, valor, setValor}) => {
 

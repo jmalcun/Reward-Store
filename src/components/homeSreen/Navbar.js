@@ -1,12 +1,12 @@
-import React, { useContext, useState } from 'react'
-import { ContextValues } from './Context'
+import React, { useContext, useEffect, useState } from 'react'
+import { getProductsOrUser } from '../../helpers/getProducts-user'
+import { ContextValues } from '../context/Context'
 import { MenuItems } from './MenuItems'
 
 export const Navbar = () => {
 
     const {user} = useContext(ContextValues)
     const {name, points} = user
-
     const [openMenu, setOpenMenu] = useState(false)
     const [state, setState] = useState(false)
 
@@ -30,6 +30,10 @@ export const Navbar = () => {
             button:"btn-menu animation2"
         } 
     }
+
+    useEffect(() => {
+       getProductsOrUser("user")
+    }, [points])
     
     return (
         <div className="data-user">

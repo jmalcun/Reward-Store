@@ -6,7 +6,8 @@ export const CardHistory = ({name, cost, category, createDate, img}) => {
     const {url} = img
     const recorte = createDate.slice(0,10)
     const fechaFormat = new Date(recorte)
-    const fecha = `${fechaFormat.getDay()}/${fechaFormat.getMonth()}/${fechaFormat.getUTCFullYear()}`
+    const fecha = `${fechaFormat.getDate()}/${fechaFormat.getMonth()+1}/${fechaFormat.getUTCFullYear()}`
+    
     
     return (
         <>

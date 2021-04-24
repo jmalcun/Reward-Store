@@ -12,10 +12,8 @@ export const usePagination = () => {
     
     
     useEffect(() => {
-        if(list.length === 0){
-            getProductsOrUser("products")
-                .then( p => setList(p))
-        }
+        getProductsOrUser("products")
+            .then( product => setList(product))
     }, [])
 
     //PAGINATION
