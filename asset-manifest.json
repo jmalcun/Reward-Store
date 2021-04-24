@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/Reward-Store/static/css/main.38168f93.chunk.css",
+    "main.js": "/Reward-Store/static/js/main.3c26fac5.chunk.js",
+    "main.js.map": "/Reward-Store/static/js/main.3c26fac5.chunk.js.map",
+    "runtime-main.js": "/Reward-Store/static/js/runtime-main.cf10ee38.js",
+    "runtime-main.js.map": "/Reward-Store/static/js/runtime-main.cf10ee38.js.map",
+    "static/js/2.cc16706f.chunk.js": "/Reward-Store/static/js/2.cc16706f.chunk.js",
+    "static/js/2.cc16706f.chunk.js.map": "/Reward-Store/static/js/2.cc16706f.chunk.js.map",
+    "index.html": "/Reward-Store/index.html",
+    "static/css/main.38168f93.chunk.css.map": "/Reward-Store/static/css/main.38168f93.chunk.css.map",
+    "static/js/2.cc16706f.chunk.js.LICENSE.txt": "/Reward-Store/static/js/2.cc16706f.chunk.js.LICENSE.txt",
+    "static/media/coin.26de1690.svg": "/Reward-Store/static/media/coin.26de1690.svg",
+    "static/media/game-controller.87342d8d.svg": "/Reward-Store/static/media/game-controller.87342d8d.svg",
+    "static/media/header-x1.b6f067c6.png": "/Reward-Store/static/media/header-x1.b6f067c6.png",
+    "static/media/homer-happy.89ae568a.jpg": "/Reward-Store/static/media/homer-happy.89ae568a.jpg",
+    "static/media/homer-sad.59d29cc1.jpg": "/Reward-Store/static/media/homer-sad.59d29cc1.jpg",
+    "static/media/loading.dc31ae37.svg": "/Reward-Store/static/media/loading.dc31ae37.svg",
+    "static/media/power-button.96852d47.svg": "/Reward-Store/static/media/power-button.96852d47.svg",
+    "static/media/power.73ea9908.svg": "/Reward-Store/static/media/power.73ea9908.svg",
+    "static/media/rules.403c7a14.svg": "/Reward-Store/static/media/rules.403c7a14.svg",
+    "static/media/smartphone.73f90dc7.svg": "/Reward-Store/static/media/smartphone.73f90dc7.svg",
+    "static/media/television.e6ab2f45.svg": "/Reward-Store/static/media/television.e6ab2f45.svg",
+    "static/media/treasure.87f90b95.svg": "/Reward-Store/static/media/treasure.87f90b95.svg",
+    "static/media/treasureOpen.388355e5.svg": "/Reward-Store/static/media/treasureOpen.388355e5.svg",
+    "static/media/trolley.1e2a9419.svg": "/Reward-Store/static/media/trolley.1e2a9419.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cf10ee38.js",
+    "static/js/2.cc16706f.chunk.js",
+    "static/css/main.38168f93.chunk.css",
+    "static/js/main.3c26fac5.chunk.js"
+  ]
+}
